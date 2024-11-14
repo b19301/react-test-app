@@ -5,7 +5,7 @@ function App() {
   const [objectName, setObjectName] = useState([]);
 
   useEffect(() => {
-    axios.get('http://115.68.177.238:8090/api/health_check')
+    axios.get('/api/health_check')
       .then(response => {
         console.log(response.data)
         setObjectName(response.data);
